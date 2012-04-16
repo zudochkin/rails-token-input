@@ -1,0 +1,5 @@
+<%= simple_form_for resource do |f| %>
+  <%= f.input :name %>
+  <%= f.input :location, input_html: { class: 'token-input-questionable' } %>
+  <%= f.submit nil %>
+<% end %>

@@ -16,11 +16,9 @@
 
 $(function() {
   var $input = $('.token-input-questionable');
-
-  if ($input.length > 0) {
-    $input.tokenInput('/questionable.json', {
+   $input.tokenInput('/questionable.json', {
       tokenLimit: 1,
-      tokenValue: 'id_with_class_name'
+      tokenValue: 'id_with_class_name',
+      prePopulate: $input.data('pre')
     });
-  }
 });

@@ -1,5 +1,8 @@
 <%= simple_form_for resource do |f| %>
+  <% pre = if resource.questionable %>
+    <% [resource.questionable].to_json(only: [:id, :name]) %>
+  <% end %>
   <%= f.input :name %>
-  <%= f.input :location, input_html: { class: 'token-input-questionable' } %>
+  <%= f.input :location, input_html: { 'data-pre' => pre, class: 'token-input-questionable' } %>
   <%= f.submit nil %>
 <% end %>

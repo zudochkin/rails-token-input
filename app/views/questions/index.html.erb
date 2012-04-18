@@ -1,0 +1,3 @@
+<h3>Список вопросов</h3>
+<%= link_to 'Создать вопрос', :new_question %>
+<%= render partial: 'question', collection: collection, as: :resource %>
